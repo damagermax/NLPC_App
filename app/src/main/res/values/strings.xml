@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">NLPC App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="verify_number">Verify Number</string>
+    <string name="verify_msg">NLPC will send an SMS message (carrier charges may apply) to verify your number. Select your county and enter your phone number:</string>
+    <string name="submit">submit</string>
+    <string name="phone_number">Phone number</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="confirm_msg">waiting to automatically detect an SMS sent to +233 55885245</string>
+    <string name="confirm">confirm</string>
+    <string name="phone">Phone Number</string>
+    <string name="full_name">Full Name</string>
+    <string name="register">Register</string>
+
+    <string name="events">Events</string>
+    <string name="locations">Locations</string>
+    <string name="library">Library</string>
+    <string name="more">More</string>
+    <string name="discover">Discover</string>
+    <string name="search_location">Search location</string>
+    <string name="search_event">Search event</string>
+    <string name="location_image">location_image</string>
+</resources>

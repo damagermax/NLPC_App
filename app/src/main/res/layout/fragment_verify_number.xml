@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.VerifyNumber">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="16dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:gravity="center"
+                android:text="@string/verify_number"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lineSpacingExtra="3dp"
+                android:text="@string/verify_msg" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/edittext_roundcorner"
+                android:layout_height="wrap_content">
+
+                <com.hbb20.CountryCodePicker
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    app:ccpDialog_showFlag="false"
+                    app:ccpDialog_showNameCode="false"
+                    app:ccp_showFlag="false"
+                    app:ccp_showNameCode="false"
+                    app:ccpDialog_showTitle="false"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccpDialog_searchEditTextTint="@color/deep_gray"
+                    app:ccp_showFullName="false"
+                    app:ccp_showPhoneCode="true" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/gray"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:hint="@string/phone_number"
+                    android:inputType="number"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+
+            </LinearLayout>
+
+
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/submitBtn"
+                android:layout_marginTop="50dp"
+                android:text="@string/submit" />
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

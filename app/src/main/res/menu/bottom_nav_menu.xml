@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <item
+        android:title="@string/discover"
+        android:id="@+id/dashboard"
+        android:icon="@drawable/home"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:title="@string/library"
+        android:id="@+id/library"
+        android:icon="@drawable/play"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:title="@string/locations"
+        android:id="@+id/locations"
+        android:icon="@drawable/location"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:title="@string/events"
+        android:id="@+id/events"
+        android:icon="@drawable/calendar"
+        app:showAsAction="ifRoom"/>
+   <item
+        android:title="@string/more"
+        android:id="@+id/more"
+        android:icon="@drawable/more"
+        app:showAsAction="ifRoom"/>
+
+</menu>

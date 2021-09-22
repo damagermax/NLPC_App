@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="2dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:id="@+id/audio_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/location_image"
+                android:scaleType="centerCrop" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/audio_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="N/A"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/audio_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="N/A" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <!-- language icon -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/voice_24"/>
+
+                <!-- language text -->
+                <TextView
+                    android:id="@+id/audio_language"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textSize="11sp"
+                    android:text="EWE $ TWI" />
+
+
+                <!-- date icon -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/calendar_24"/>
+                <!-- date text -->
+                <TextView
+                    android:id="@+id/audio_date"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:textSize="11sp"
+                    android:lines="1"
+                    android:text="20/85/200" />
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom" />
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/verifyNumber">
+
+    <fragment
+        android:id="@+id/verifyNumber"
+        android:name="com.example.nlpcapp.fragments.VerifyNumber"
+        android:label="fragment_verify_number"
+        tools:layout="@layout/fragment_verify_number" >
+        <action
+            android:id="@+id/action_verifyNumber_to_confirm2"
+            app:destination="@id/confirm2"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/register"
+        android:name="com.example.nlpcapp.fragments.register"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_register_to_dashboard"
+            app:destination="@id/dashboard"
+            app:popUpTo="@id/verifyNumber"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirm2"
+        android:name="com.example.nlpcapp.fragments.confirm"
+        android:label="fragment_confirm"
+        tools:layout="@layout/fragment_confirm" >
+        <action
+            android:id="@+id/action_confirm2_to_register"
+            app:destination="@id/register"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="com.example.nlpcapp.fragments.Dashboard"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/events"
+        android:name="com.example.nlpcapp.fragments.Events"
+        android:label="fragment_events"
+        tools:layout="@layout/fragment_events" />
+    <fragment
+        android:id="@+id/library"
+        android:name="com.example.nlpcapp.fragments.Library"
+        android:label="fragment_library"
+        tools:layout="@layout/fragment_library" >
+        <action
+            android:id="@+id/action_library_to_audioFragment"
+            app:destination="@id/audioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/locations"
+        android:name="com.example.nlpcapp.fragments.Locations"
+        android:label="fragment_locations"
+        tools:layout="@layout/fragment_locations" />
+    <fragment
+        android:id="@+id/more"
+        android:name="com.example.nlpcapp.fragments.More"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more" />
+    <fragment
+        android:id="@+id/audioFragment"
+        android:name="com.example.nlpcapp.fragments.AudioFragment"
+        android:label="fragment_audio"
+        tools:layout="@layout/fragment_audio" />
+</navigation>
