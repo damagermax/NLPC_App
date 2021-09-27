@@ -14,6 +14,9 @@
             android:id="@+id/action_verifyNumber_to_confirm2"
             app:destination="@id/confirm2"
             app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_verifyNumber_to_dashboard"
+            app:destination="@id/dashboard" />
     </fragment>
     <fragment
         android:id="@+id/register"

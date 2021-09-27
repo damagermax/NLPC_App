@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_gravity="center"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.confirm">
 
+
+    <!-- content -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:orientation="vertical">
+            android:layout_margin="16dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -23,6 +30,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="40dp"
                 android:gravity="center"
+                android:id="@+id/confirmHd"
                 android:text="@string/confirmation"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                 android:textSize="30sp" />
@@ -31,6 +39,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:id="@+id/confirmMsg"
+                android:layout_below="@id/confirmHd"
                 android:lineSpacingExtra="3dp"
                 android:text="@string/confirm_msg" />
 
@@ -39,25 +49,79 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:itemBackground="@color/gray"
+                android:id="@+id/pinView"
+                android:layout_below="@id/confirmMsg"
                 android:cursorVisible="true"
+                android:layout_centerHorizontal="true"
                 android:inputType="number"
                 android:layout_marginTop="25dp"
                 style="@style/PinWidget.PinView"
                 app:itemCount="6"
-                android:layout_gravity="center_horizontal"/>
+               />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:id="@+id/confirmBtn"
+                android:layout_below="@id/pinView"
                 android:layout_marginTop="50dp"
                 android:text="@string/confirm" />
 
 
-        </LinearLayout>
+        </RelativeLayout>
 
 
-    </ScrollView>
 
 
-</LinearLayout>
+    </ScrollView><!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:id="@+id/progress_dialog"
+        android:layout_centerInParent="true"
+        android:background="#00000000"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="120dp"
+            app:cardCornerRadius="10dp"
+            android:layout_height="120dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+                <ProgressBar
+                    android:id="@+id/cp_pbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                     />
+
+                <TextView
+                    android:id="@+id/cp_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Loading..."
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    />
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>-->
+
+    <!-- progress dialog -->
+
+
+
+</RelativeLayout>

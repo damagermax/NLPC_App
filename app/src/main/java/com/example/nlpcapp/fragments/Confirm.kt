@@ -6,64 +6,65 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.navigation.findNavController
+import androidx.lifecycle.ViewModelProvider
+
+import com.chaos.view.PinView
 import com.example.nlpcapp.R
+import com.example.nlpcapp.utils.showToast
+import com.example.nlpcapp.viewmodel.AuthViewModel
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+import androidx.appcompat.app.AlertDialog
 
-/**
- * A simple [Fragment] subclass.
- * Use the [confirm.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class confirm : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
+    private lateinit var pinView: PinView
+    private lateinit var dialog: AlertDialog
+    private lateinit var confirmBtn: Button
+    private lateinit var authViewModel: AuthViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_confirm, container, false)
 
-        view.findViewById<Button>(R.id.confirmBtn).setOnClickListener {
+        confirmBtn = view.findViewById(R.id.confirmBtn)
+        pinView = view.findViewById(R.id.pinView)
+        authViewModel = ViewModelProvider(requireActivity()).get(AuthViewModel::class.java)
 
-            val action = confirmDirections.actionConfirm2ToRegister()
-            it.findNavController().navigate(action)
-        }
-
+        showDialog()
         return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment confirm.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            confirm().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
+        confirmBtn.setOnClickListener {
+
+
+            val otp = pinView.text.toString()
+
+            if (otp.isEmpty()) {
+                requireActivity().showToast("Enter code")
+            } else {
+                authViewModel.signInUser(otp)
             }
+
+
+        }
     }
+
+    private fun showDialog() {
+        val builder: AlertDialog.Builder = AlertDialog.Builder(requireContext())
+        builder.setCancelable(false) // if you want user to wait for some process to finish,
+        builder.setView(R.layout.progress_dialog_view)
+        dialog = builder.create()
+        dialog.window!!.setLayout(300, 300)
+
+    }
+
+
+
 }

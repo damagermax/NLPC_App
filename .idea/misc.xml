@@ -8,8 +8,9 @@
         <entry key="..\:/Users/Maxwell/AndroidStudioProjects/NLPCApp/app/src/main/res/drawable/voice_24.xml" value="0.2078125" />
         <entry key="..\:/Users/Maxwell/AndroidStudioProjects/NLPCApp/app/src/main/res/layout/activity_main.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/Maxwell/AndroidStudioProjects/NLPCApp/app/src/main/res/layout/audio_item.xml" value="0.22" />
+        <entry key="..\:/Users/Maxwell/AndroidStudioProjects/NLPCApp/app/src/main/res/layout/custom_dialog.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/Maxwell/AndroidStudioProjects/NLPCApp/app/src/main/res/layout/fragment_audio.xml" value="0.19166666666666668" />
-        <entry key="..\:/Users/Maxwell/AndroidStudioProjects/NLPCApp/app/src/main/res/layout/fragment_confirm.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Maxwell/AndroidStudioProjects/NLPCApp/app/src/main/res/layout/fragment_confirm.xml" value="0.2" />
         <entry key="..\:/Users/Maxwell/AndroidStudioProjects/NLPCApp/app/src/main/res/layout/fragment_dashboard.xml" value="0.21145745577085087" />
         <entry key="..\:/Users/Maxwell/AndroidStudioProjects/NLPCApp/app/src/main/res/layout/fragment_events.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/Maxwell/AndroidStudioProjects/NLPCApp/app/src/main/res/layout/fragment_library.xml" value="0.19166666666666668" />
@@ -18,6 +19,7 @@
         <entry key="..\:/Users/Maxwell/AndroidStudioProjects/NLPCApp/app/src/main/res/layout/fragment_register.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/Maxwell/AndroidStudioProjects/NLPCApp/app/src/main/res/layout/fragment_verify_number.xml" value="0.22" />
         <entry key="..\:/Users/Maxwell/AndroidStudioProjects/NLPCApp/app/src/main/res/layout/locations_item.xml" value="0.22" />
+        <entry key="..\:/Users/Maxwell/AndroidStudioProjects/NLPCApp/app/src/main/res/layout/progress_dialog_view.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/Maxwell/AndroidStudioProjects/NLPCApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.19166666666666668" />
       </map>
     </option>

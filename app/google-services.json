@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "186954159135",
+    "project_id": "nlpc-app",
+    "storage_bucket": "nlpc-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:186954159135:android:27698581861a3b4dfbb12a",
+        "android_client_info": {
+          "package_name": "com.example.nlpcapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "186954159135-tcu5eed2657tn9dh2thnqqd6e590prv2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nlpcapp",
+            "certificate_hash": "248e173f8e7dacf5e5a6ba19d766d23c587a3921"
+          }
+        },
+        {
+          "client_id": "186954159135-gclctpk8opak7dnbtchc4gcrn3nu7cuc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaPvnci69JxwlpFocHUaxCqDKHJ0jDvpc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "186954159135-gclctpk8opak7dnbtchc4gcrn3nu7cuc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
